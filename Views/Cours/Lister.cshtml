@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MainClass.Cour>
+
+@{
+    ViewBag.Title = "Lister Cours";
+}
+
+<h2>Lister</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Ajouter")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodeCours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomCours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ponderation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeCours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomCours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ponderation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Editer", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Effacer", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
