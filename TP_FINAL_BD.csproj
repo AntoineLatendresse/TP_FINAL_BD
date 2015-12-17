@@ -107,22 +107,17 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\Films\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CinemaController.cs" />
     <Compile Include="Controllers\CoursController.cs" />
-    <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProgrammesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cinema.cs" />
     <Compile Include="Models\MainClass.cs" />
     <Compile Include="Models\SqlExpressUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,7 +200,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Acteurs\Anonymous.png" />
     <Content Include="Images\Programmes\UnknownPoster.png" />
     <Content Include="Images\Programmes\ExploitationAgricole.jpg" />
     <Content Include="Images\Programmes\GenieIndustriel.jpg" />
@@ -267,11 +261,6 @@
     <Content Include="Scripts\jui_theme_switch\json_data\dist\default.json" />
     <Content Include="Scripts\jui_theme_switch\CHANGELOG.md" />
     <Content Include="Scripts\jui_theme_switch\.gitignore" />
-    <Content Include="Views\Cinema\Index.cshtml" />
-    <Content Include="Views\Films\Lister.cshtml" />
-    <Content Include="Views\Films\Ajouter.cshtml" />
-    <Content Include="Views\Films\Editer.cshtml" />
-    <Content Include="Views\Films\Details.cshtml" />
     <Content Include="Views\Cours\Lister.cshtml" />
     <Content Include="Views\Cours\Ajouter.cshtml" />
     <Content Include="Views\Cours\Editer.cshtml" />
