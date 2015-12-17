@@ -118,6 +118,7 @@
     <Compile Include="Controllers\CoursController.cs" />
     <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProgrammesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -275,6 +276,10 @@
     <Content Include="Views\Cours\Ajouter.cshtml" />
     <Content Include="Views\Cours\Editer.cshtml" />
     <Content Include="Views\Programmes\Lister.cshtml" />
+    <Content Include="Views\Programmes\Ajouter.cshtml" />
+    <Content Include="Views\Programmes\Editer.cshtml" />
+    <Content Include="Views\Programmes\Details.cshtml" />
+    <Content Include="Views\Cours\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

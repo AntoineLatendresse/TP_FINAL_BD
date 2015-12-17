@@ -107,5 +107,14 @@ namespace DEMO_MVC.Controllers
             }
             return View(cour);
         }
+
+        public ActionResult Details(String Id)
+        {
+            Cours cours = new Cours(Session["Main_BD"]);
+            if (cours.SelectByID(Id))
+                return View(cours.cour);
+            else
+                return RedirectToAction("Lister", "Cours");
+        }
 	}
 }

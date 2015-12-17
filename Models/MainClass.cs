@@ -97,7 +97,7 @@ namespace MainClass
         [StringLength(50), Required]
         public String Ponderation { get; set; }
 
-        public Cour() 
+        public Cour()
         {
             CodeCours = "";
             NomCours = "";
@@ -156,7 +156,7 @@ namespace MainClass
 
         private ImageGUIDReference ImageReference;
 
-        public Programme() 
+        public Programme()
         {
             CodeProgramme = "";
             NomProgramme = "";
@@ -178,37 +178,37 @@ namespace MainClass
         {
             ImageReference.Remove(PhotoProgramme);
         }
-
-        public class Programmes : SqlExpressUtilities.SqlExpressWrapper
+    }
+    public class Programmes : SqlExpressUtilities.SqlExpressWrapper
+    {
+        public Programme programme { get; set; }
+        public Programmes(object cs)
+            : base(cs)
         {
-            public Programme programme { get; set; }
-            public Programmes(object cs)
-                : base(cs)
-            {
-                programme = new Programme();
-            }
-            public Programmes() { programme = new Programme(); }
+            programme = new Programme();
+        }
+        public Programmes() { programme = new Programme(); }
 
-            public List<Programme> ToList()
+        public List<Programme> ToList()
+        {
+            List<object> list = this.RecordsList();
+            List<MainClass.Programme> programmes_list = new List<Programme>();
+            foreach (Programme programme in list)
             {
-                List<object> list = this.RecordsList();
-                List<MainClass.Programme> programmes_list = new List<Programme>();
-                foreach (Programme programme in list)
-                {
-                    programmes_list.Add(programme);
-                }
-                return programmes_list;
+                programmes_list.Add(programme);
             }
-
-            public override void DeleteRecordByID(String ID)
-            {
-                if (this.SelectByID(ID))
-                {
-                    this.programme.RemovePoster();
-                    base.DeleteRecordByID(ID);
-                }
-            }
+            return programmes_list;
         }
 
+        public override void DeleteRecordByID(String ID)
+        {
+            if (this.SelectByID(ID))
+            {
+                this.programme.RemovePoster();
+                base.DeleteRecordByID(ID);
+            }
+        }
     }
+
+
 }

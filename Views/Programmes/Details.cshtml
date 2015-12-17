@@ -1,0 +1,42 @@
+﻿@model MainClass.Programme
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Programme</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodeProgramme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodeProgramme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomProgramme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomProgramme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhotoProgramme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhotoProgramme)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editer", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Lister")
+</p>
