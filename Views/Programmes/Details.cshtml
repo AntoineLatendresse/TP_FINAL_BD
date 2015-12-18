@@ -31,9 +31,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PhotoProgramme)
+            <img id="new_image" src="@Url.Content("~" + Model.GetPosterURL())" class="poster" />
         </dd>
-
     </dl>
 </div>
 <p>

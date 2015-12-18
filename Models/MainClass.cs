@@ -160,7 +160,7 @@ namespace MainClass
         {
             CodeProgramme = "";
             NomProgramme = "";
-            NomProgramme = "";
+            PhotoProgramme = "";
             ImageReference = new ImageGUIDReference(@"/Images/Programmes/", @"UnknownPoster.png");
         }
 
